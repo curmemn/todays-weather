@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오늘의 날씨는?🌈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>오늘의 날씨는?</h1>
+    <div class="box">
+      <input type="text" id="cityInput" placeholder="도시 이름을 입력하세요." onkeypress="weather()">
+      <button id="getWeather" onclick="weather()">검색</button>
+    </div>
+    <div id="showResult">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
