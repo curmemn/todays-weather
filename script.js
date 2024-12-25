@@ -81,9 +81,8 @@ return result ? Object.values(result)[0] : '잘못된 값입니다';
 }
 function weather(e){
 let city = document.getElementById('cityInput').value;
-let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}&lang=ko`;
 let showResult = document.getElementById('showResult');
-fetch(url)
+fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}&lang=ko`)
 .then(response => response.json())
 .then(data => {
 let lat = data[0].lat; 
@@ -146,20 +145,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&app
   }
   else if(icon === '50d' || icon === '50n'){
     iconImage.setAttribute("src", "images/mist.png");
-  }
-  //페이지 로드 시 현재 위치 날씨 기본 표시 <?
-  window.onload = function(){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(position => {
-        const{ lat, lon } = position.coords;
-        fetchWeatherByLocation(lat, lon);
-      }, () => { 
-        // 위치 거부 시 
-        weather('서울');
-      })
-    }else{
-      weather('서울');
-    }
   }
 })
 .catch(error => console.error("Error: ", error));
