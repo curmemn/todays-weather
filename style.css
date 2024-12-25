@@ -53,7 +53,7 @@ h1{
   flex-direction: column;
   color: #4d82c9;
   box-shadow: 0 0 10px #dbdbdb;
-  background: url(images/background.jpg) no-repeat center;
+  background: url(images/weather-background.jpg) no-repeat center;
 }
 
 #weatherResult h3{
