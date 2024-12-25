@@ -82,7 +82,7 @@ return result ? Object.values(result)[0] : '잘못된 값입니다';
 function weather(e){
 let city = document.getElementById('cityInput').value;
 let showResult = document.getElementById('showResult');
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}&lang=ko`)
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}&lang=ko`)
 .then(response => response.json())
 .then(data => {
 let lat = data[0].lat; 
