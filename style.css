@@ -74,3 +74,21 @@ h1{
   height: 150px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 480px) {
+  .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+  }
+
+  #cityInput{
+    width: 75%;
+  }
+
+  #getWeather{
+    width: 20%;
+  }
+}
